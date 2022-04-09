@@ -1,7 +1,9 @@
-from django.db import models
 from django.contrib.auth.models import User
+from django.db import models
+
 from apps.departamentos.models import Departamento
 from apps.empresas.models import Empresa
+
 
 # Create your models here.
 class Funcionario(models.Model):

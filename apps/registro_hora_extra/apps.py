@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class RegistroHoraExtraConfig(AppConfig):
-    name = 'registro_hora_extra'
+    name = "registro_hora_extra"
