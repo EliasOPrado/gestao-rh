@@ -1,6 +1,5 @@
-from django.db import models
-
 from apps.funcionarios.models import Funcionario
+from django.db import models
 
 
 # Create your models here.

@@ -10,4 +10,4 @@ class Empresa(models.Model):
         return str(self.nome)
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse("home")
