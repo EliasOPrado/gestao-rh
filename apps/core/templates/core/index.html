@@ -5,6 +5,7 @@
 <div class="row">
     <div class="col">
      Ola {{ usuario.funcionario.nome}}
+     <a href="{% url 'list_funcionarios'%}">Gerenciar funcionarios</a>
     </div>
     <div class="col">
         <a href="{% url 'login' %}">Login</a>
@@ -13,10 +14,9 @@
       <a href="{% url 'logout' %}">Logout</a>
 
       {% if usuario.funcionario.empresa %}
-        <a href="{% url ''}">Editar Empresa</a>
-
+        <a href="{% url 'editar_empresa' usuario.funcionario.empresa.id %}">Editar Empresa</a>
       {% else %}
-      <a href="{% url ''}">Criar Empresa</a>
+      <a href="{% url 'criar_empresa' %}">Criar Empresa</a>
       {% endif %}
     </div>
   </div>
