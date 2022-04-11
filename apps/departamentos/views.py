@@ -6,17 +6,16 @@ from django.urls import reverse_lazy
 # Create your views here.
 class DepartamentoCreate(CreateView):
     model = Departamento
-    fields = ["nome", "departamento"]
+    fields = ["nome",]
 
     def form_valid(self, form):
-        pass
         # avoid send to db.
-        # departamento = form.save(commit=False)
-        # departamento.empresa = self.request.user.departamento.empresa
-        # username = departamento.nome.split(' ')[0] + departamento.nome.split(' ')[1]
-        # departamento.user = User.objects.create(username=username)
-        # departamento.save()
-        # return super(departamentoCreate, self).form_valid(form)
+        departamento = form.save(commit=False)
+        departamento.empresa = self.request.user.funcionario.empresa
+        departamento.save()
+        return super(DepartamentoCreate, self).form_valid(form)
+
+
 class DepartamentoList(ListView):
     model = Departamento
 
@@ -28,7 +27,7 @@ class DepartamentoList(ListView):
 
 class DepartamentoEdit(UpdateView):
     model = Departamento
-    fields = ["nome", "departamento"]
+    fields = ["nome"]
 
 
 class DepartamentoDelete(DeleteView):
