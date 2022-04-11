@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+
+{% block main %}
+{% for documento in object_list %}
+   <a href="">{{ documento }}</a>
+   <a href="">deletar'</a>  <br>
+{% endfor %}
+
+<a href="" class='btn btn-info'>Novo documento</a>
+{% endblock %}

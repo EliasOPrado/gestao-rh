@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 # Create your views here.
 class DepartamentoCreate(CreateView):
     model = Departamento
-    fields = ["nome",]
+    fields = ["descricao","pertencente"]
 
     def form_valid(self, form):
         # avoid send to db.
