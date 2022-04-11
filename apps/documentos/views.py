@@ -9,10 +9,8 @@ class DocumentoCreate(CreateView):
     fields = ['descricao', 'arquivo']
 
     def post(self, request, *args, **kwargs):
-
         form = self.get_form()
         form.instance.pertencente_id = self.kwargs['funcionario_id']
-
         if form.is_valid():
             return self.form_valid(form)
         else:
