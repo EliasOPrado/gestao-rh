@@ -27,6 +27,8 @@
         </li>
     {% endfor %}
     </ul>
+
+    <h3>Total de horas extras {{object.total_hora_extra}}</h3>
 <a href="{% url 'create_documento' object.pk %}" class="btn btn-info">Adicionar documento</a>
 
 {% endblock %}
