@@ -22,8 +22,7 @@
 
     {% endif %}
 
-    <button onclick="utilizouHoraExtra({{ object.id }})"
-            class="btn btn-info" type="button">
+    <button onclick="utilizouHoraExtra({{ object.id }})" class="btn btn-info" type="button">
         Marcar como utilizada
     </button>
 
@@ -36,7 +35,7 @@
 {% endblock %}
 
 
-{% comment %} {% block static %}
+ {% block static %}
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/funcoes-ajax.js' %}"></script>
-{% endblock %} {% endcomment %}
+{% endblock %} 
