@@ -9,5 +9,5 @@ class FuncionarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Funcionario
         fields = (
-            'id', 'nome', 'departamento', 'empresa', 'user', 'imagem',
+            'id', 'nome', 'departamento', 'empresa', 'user',
             'total_horas_extra', 'registrohoraextra_set')
