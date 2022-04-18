@@ -1,7 +1,8 @@
-from apps.empresas.models import Empresa
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView
+
+from apps.empresas.models import Empresa
 
 
 # Create your views here.

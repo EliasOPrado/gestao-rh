@@ -25,12 +25,11 @@ SECRET_KEY = ")+9(k&!y+yzolx_s$ypsowl=s34(q@qmrr8r(o6!gd%%rbv-mr"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '54.72.146.86']
+ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1", "54.72.146.86"]
 
 # Application definition
 
 INSTALLED_APPS = [
-
     # Django internal apps.
     "django.contrib.admin",
     "django.contrib.auth",
@@ -38,10 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     # third party apps
-    'bootstrapform',
-
+    "bootstrapform",
     # apps
     "apps.empresas",
     "apps.funcionarios",
@@ -129,23 +126,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-# stylesheets -> href='/static/css.. 
+# stylesheets -> href='/static/css..
 STATIC_URL = "/static/"
 
-# tells django where is the static folder. 
+# tells django where is the static folder.
 # relative path below:
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "staticfiles"),
 ]
 
-MEDIA_URL = '/media/'
+MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # The place where django will look in production.
 # will get all the static folders and send the data to one folder.
 # Will be used after the command 'manage.py collectstatic'.
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'login'
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "login"

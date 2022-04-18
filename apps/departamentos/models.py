@@ -1,6 +1,7 @@
 from django.db import models
-from apps.empresas.models import Empresa
 from django.urls import reverse_lazy
+
+from apps.empresas.models import Empresa
 
 
 # Create your models here.
@@ -9,7 +10,7 @@ class Departamento(models.Model):
     empresa = models.ForeignKey(Empresa, on_delete=models.PROTECT)
 
     def get_absolute_url(self):
-        return reverse_lazy('list_departamentos')
+        return reverse_lazy("list_departamentos")
 
     def __str__(self):
         return str(self.nome)

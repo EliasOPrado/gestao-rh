@@ -1,7 +1,11 @@
 from django.urls import include, path
 
-from .views import (DepartamentoCreate, DepartamentoDelete, DepartamentoEdit,
-                    DepartamentoList)
+from .views import (
+    DepartamentoCreate,
+    DepartamentoDelete,
+    DepartamentoEdit,
+    DepartamentoList,
+)
 
 urlpatterns = [
     path("", DepartamentoList.as_view(), name="list_departamentos"),

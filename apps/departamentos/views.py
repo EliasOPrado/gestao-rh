@@ -1,12 +1,14 @@
 from django.shortcuts import render
-from .models import Departamento
-from django.views.generic import CreateView, ListView, DeleteView, UpdateView
 from django.urls import reverse_lazy
+from django.views.generic import CreateView, DeleteView, ListView, UpdateView
+
+from .models import Departamento
+
 
 # Create your views here.
 class DepartamentoCreate(CreateView):
     model = Departamento
-    fields = ["descricao","pertencente"]
+    fields = ["descricao", "pertencente"]
 
     def form_valid(self, form):
         # avoid send to db.

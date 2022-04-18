@@ -1,6 +1,7 @@
-from apps.funcionarios.models import Funcionario
 from django.db import models
 from django.urls import reverse
+
+from apps.funcionarios.models import Funcionario
 
 
 # Create your models here.
@@ -11,7 +12,7 @@ class RegistroHoraExtra(models.Model):
     utilizada = models.BooleanField(default=False)
 
     def get_absolute_url(self):
-        return reverse('update_funcionario', args=[self.funcionario.id])
+        return reverse("update_funcionario", args=[self.funcionario.id])
 
     def __str__(self):
         return str(self.motivo)
