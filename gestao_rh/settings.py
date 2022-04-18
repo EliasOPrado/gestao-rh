@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # third party apps
     "bootstrapform",
+    "rest_framework",
     # apps
     "apps.empresas",
     "apps.funcionarios",
