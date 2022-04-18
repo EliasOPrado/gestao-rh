@@ -19,11 +19,11 @@ class Funcionario(models.Model):
         return reverse("list_funcionarios")
 
     @property
-    def total_hora_extra(self):
+    def total_horas_extra(self):
         # query result: {'horas__sum': Decimal('25')}
-        total = self.registrohoraextra_set.all().aggregate(
+        total = self.registrohoraextra_set.filter(utilizada=False).aggregate(
             Sum('horas'))['horas__sum']
-        return total
+        return total or 0
 
 
     def __str__(self):

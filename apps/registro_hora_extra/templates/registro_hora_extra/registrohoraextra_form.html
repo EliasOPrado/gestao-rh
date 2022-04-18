@@ -1,5 +1,3 @@
-
-   
 {% extends 'base.html' %}
 {% load static %}
 {% load bootstrap %}
@@ -11,8 +9,6 @@
 
     {{ form|bootstrap }}
 
-    <br>
-
     <button type="submit" class="btn btn-primary">Salvar</button>
 
     {% if object %}
@@ -22,20 +18,21 @@
 
     {% endif %}
 
-    <button onclick="utilizouHoraExtra({{ object.id }})" class="btn btn-info" type="button">
+    <button onclick="utilizouHoraExtra({{ object.id }})"
+            class="btn btn-info" type="button">
         Marcar como utilizada
     </button>
 
 </form>
 
-<h2 id="horas_atualizadas"> {{ object.funcionario.total_horas_extra }}</h2>
+<h3 id="horas_atualizadas"> Total Horas Extras: {{ object.funcionario.total_horas_extra }}</h3>
 
 <br>
-{% comment %} <p id="mensagem"></p> {% endcomment %}
+<p id="mensagem"></p>
 {% endblock %}
 
 
- {% block static %}
+{% block static %}
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/funcoes-ajax.js' %}"></script>
-{% endblock %} 
+{% endblock %}
