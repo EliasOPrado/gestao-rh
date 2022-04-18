@@ -6,6 +6,7 @@ from .views import (
     FuncionariosEdit,
     FuncionariosList,
     relatorio_funcionarios,
+    Pdf
 )
 
 urlpatterns = [
@@ -15,5 +16,8 @@ urlpatterns = [
     path("deletar/<int:pk>/", FuncionariosDelete.as_view(), name="delete_funcionario"),
     path(
         "relatorio-funcionarios/", relatorio_funcionarios, name="relatorio_funcionarios"
+    ),
+    path(
+        "relatorio-funcionarios_html", relatorio_funcionarios, name="relatorio_funcionarios_html"
     ),
 ]
