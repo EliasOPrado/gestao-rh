@@ -14,7 +14,7 @@ def send_relatorio():
         'Relatorio Celery',
         'Relatorio geral de funcionarios %f' % total,
         'eliasprado123@outlook.com',
-        ['eliaspradoprofessional@outlook.com']
+        ['eliaspradoprofessional@outlook.com'],
         fail_silently=False
     )
     return True
