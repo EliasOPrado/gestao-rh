@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "apps.documentos",
     "apps.registro_hora_extra",
     "apps.core",
+    "django_celery_results",
 ]
 
 MIDDLEWARE = [
@@ -147,3 +148,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "login"
+
+CELERY_RESULT_BACKEND = 'django-db'
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_ACCEPT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
